@@ -29,7 +29,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 
   <style>
-    html { scroll-behavior: smooth; font-family: 'Inter', sans-serif; }
+    html { scroll-behavior: smooth; font-family: 'Inter', sans-serif; scroll-padding-top: 5rem;}
     
     .glass { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); }
     .transition-smooth { transition: all .3s cubic-bezier(.25,.8,.25,1); }
@@ -155,10 +155,10 @@
               Ver trabajos
             </a>
           </div>
-          <div class="mt-6 flex items-center gap-2 text-xs text-gray-500">
+          <!--<div class="mt-6 flex items-center gap-2 text-xs text-gray-500">
              <svg class="w-4 h-4 text-green-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
              Tintas aptas contacto alimentario (FDA)
-          </div>
+          </div>-->
         </div>
 
         <div class="order-first lg:order-last zoom-in relative">
@@ -304,40 +304,44 @@
 			</div>
 		</section>
 
-    <section id="about" class="bg-brand-dark py-16 text-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                <div class="fade-up">
-                    <h2 class="text-3xl font-bold mb-4">Más de 35 años de excelencia</h2>
-                    <p class="text-gray-400 mb-6">
-                        Fundada en 1989, Adhegrafic ha evolucionado desde la impresión tradicional hasta convertirse en un referente tecnológico. Nuestro reciente <strong>Premio a la Excelencia Empresarial</strong> avala nuestra trayectoria.
-                    </p>
-                    <ul class="space-y-3">
-                        <li class="flex items-center gap-3">
-                            <span class="text-brand-red">✓</span> Laboratorio de color propio (simulación UV)
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <span class="text-brand-red">✓</span> Equipo con 30 años de experiencia media
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <span class="text-brand-red">✓</span> Integrados en Tikedo Label Group
-                        </li>
-                    </ul>
-                </div>
-                <div class="fade-up delay-100">
-                    <div class="bg-white/10 p-8 rounded-2xl border border-white/10">
-                        <div class="text-center">
-                            <p class="text-4xl font-bold text-white mb-2">100%</p>
-                            <p class="text-red-600 text-xl font-extrabold uppercase">Garantía de Inspección</p>
-                            <p class="text-gray-400 text-sm mt-4">
-                                Gracias a nuestros sistemas de visión artificial <strong>Nikka y ODRI</strong>, garantizamos rollos libres de defectos comparando digitalmente contra el PDF original.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+		<section id="about" class="py-16 text-white relative overflow-hidden" 
+			style="background-image: url('images/fabrica-fondo.jpg'); background-size: cover; background-position: center;">
+			
+			<div class="absolute inset-0 bg-brand-dark/90"></div>
+			
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+				<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+					<div class="fade-up">
+						<h2 class="text-3xl font-bold mb-4">Más de 35 años de excelencia</h2>
+						<p class="text-gray-200 mb-6"> 
+							Fundada en 1989, Adhegrafic ha evolucionado desde la impresión tradicional hasta convertirse en un referente tecnológico. Nuestro reciente <strong>Premio a la Excelencia Empresarial</strong> avala nuestra trayectoria.
+						</p>
+						<ul class="space-y-3">
+							<li class="flex items-center gap-3">
+								<span class="text-brand-red">✓</span> Laboratorio de color propio (simulación UV)
+							</li>
+							<li class="flex items-center gap-3">
+								<span class="text-brand-red">✓</span> Equipo con 30 años de experiencia media
+							</li>
+							<li class="flex items-center gap-3">
+								<span class="text-brand-red">✓</span> Integrados en Tikedo Label Group
+							</li>
+						</ul>
+					</div>
+					<div class="fade-up delay-100">
+						<div class="bg-white/10 p-8 rounded-2xl border border-white/10 backdrop-blur-sm">
+							<div class="text-center">
+								<p class="text-4xl font-bold text-white mb-2">100%</p>
+								<p class="text-red-400 text-xl font-extrabold uppercase">Garantía de Inspección</p>
+								<p class="text-gray-300 text-sm mt-4">
+									Gracias a nuestros sistemas de visión artificial <strong>Nikka y ODRI</strong>, garantizamos rollos libres de defectos comparando digitalmente contra el PDF original.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 	
 			<section id="clientes" class="py-16 bg-white">
 				<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -399,7 +403,7 @@
 						<div class="bg-blue-50 text-blue-600 p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-600 group-hover:text-white transition-colors">
 							<span class="font-bold text-lg">BRCGS</span>
 						</div>
-						<h4 class="font-bold text-gray-900 text-lg">BRCGS Packaging</h4>
+						<h4 class="font-bold text-gray-900 text-lg">BRCGS Packaging Materials</h4>
 						<p class="text-sm text-gray-500 mt-2">Certificación Global de Seguridad e Higiene para Packaging (Grado AA).</p>
 					</a>
 					
@@ -416,7 +420,7 @@
 							<svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
 						</div>
 						<h4 class="font-bold text-gray-900 text-lg">Huella de Carbono</h4>
-						<p class="text-sm text-gray-500 mt-2">Cálculo y registro anual de la Huella de Carbono del sitio.</p>
+						<p class="text-sm text-gray-500 mt-2">Cálculo de la Huella de Carbono del sitio.</p>
 					</a>
 
 					<a href="docs/aspectos_ambientales.pdf" target="_blank" class="flex flex-col p-6 bg-white rounded-xl border border-gray-200 hover:border-purple-600 hover:shadow-xl transition-smooth group text-center transform hover:-translate-y-1">
@@ -431,7 +435,7 @@
 						<div class="bg-yellow-50 text-yellow-600 p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 group-hover:bg-yellow-600 group-hover:text-white transition-colors">
 							<svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
 						</div>
-						<h4 class="font-bold text-gray-900 text-lg">Certificado FSC</h4>
+						<h4 class="font-bold text-gray-900 text-lg">Certificado y política Cadena de Custodia FSC® (código de licencia FSC®-C175359)</h4>
 						<p class="text-sm text-gray-500 mt-2">Certificación oficial de gestión forestal sostenible.</p>
 					</a>
 
