@@ -237,51 +237,92 @@
 			</div>
 		</section>
     <section id="services" class="bg-gray-50 py-20">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16 fade-up">
-          <p class="text-sm font-bold text-brand-red tracking-wider uppercase">Nuestros Servicios</p>
-          <h2 class="text-3xl md:text-4xl font-bold mt-2 text-gray-900">Tecnología y Acabados</h2>
-		  <p class="mt-4 text-gray-600 max-w-2xl mx-auto">La precisión de nuestra maquinaria se une a los acabados premium para la máxima diferenciación de su marca.</p>
-          <div class="w-20 h-1 bg-brand-red mx-auto mt-4 rounded-full"></div>
-        </div>
-        
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <article class="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm card-hover transition-smooth fade-up">
-            <div class="w-12 h-12 bg-red-50 rounded-xl flex items-center justify-center text-brand-red mb-6">
-              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path></svg>
-            </div>
-            <h3 class="text-xl font-bold text-gray-900">Diseño & Preimpresión</h3>
-            <p class="mt-3 text-gray-600 leading-relaxed text-sm">Disponemos de fotomecánica propia. Desde el diseño inicial hasta la fabricación de clichés.</p>
-          </article>
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				
+				<div class="text-center mb-16 fade-up">
+					<p class="text-sm font-bold text-brand-red tracking-wider uppercase">Nuestros Servicios</p>
+					<h2 class="text-3xl md:text-4xl font-bold mt-2 text-gray-900">Tecnología y Acabados</h2>
+					<p class="mt-4 text-gray-600 max-w-2xl mx-auto">La precisión de nuestra maquinaria se une a los acabados premium para la máxima diferenciación de su marca.</p>
+					<div class="w-20 h-1 bg-brand-red mx-auto mt-4 rounded-full"></div>
+				</div>
+				
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+					
+					<button 
+						onclick="showTechDetails('design')" 
+						class="tech-card bg-white p-8 rounded-2xl border border-gray-100 shadow-sm card-hover transition-smooth fade-up text-left hover:shadow-lg hover:border-brand-red/50 cursor-pointer">
+						<div class="w-12 h-12 bg-red-50 rounded-xl flex items-center justify-center text-brand-red mb-6">
+							<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path></svg>
+						</div>
+						<h3 class="text-xl font-bold text-gray-900">Diseño & Preimpresión</h3>
+						<p class="mt-3 text-gray-600 leading-relaxed text-sm">Disponemos de fotomecánica propia. Desde el diseño inicial hasta la fabricación de clichés.</p>
+					</button>
 
-          <article class="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm card-hover transition-smooth fade-up" style="transition-delay: 100ms;">
-            <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center text-brand-blue mb-6">
-              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
-            </div>
-            <h3 class="text-xl font-bold text-gray-900">Impresión Flexo</h3>
-            <p class="mt-3 text-gray-600 leading-relaxed text-sm">Capacidad de hasta <strong>10 tintas</strong> UVI. Ideal para tiradas medias/largas en papel enológico, térmico o plástico.</p>
-          </article>
+					<button 
+						onclick="showTechDetails('flexo')" 
+						class="tech-card bg-white p-8 rounded-2xl border border-gray-100 shadow-sm card-hover transition-smooth fade-up text-left hover:shadow-lg hover:border-blue-600/50 cursor-pointer" 
+						style="transition-delay: 100ms;">
+						<div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center text-brand-blue mb-6">
+							<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+						</div>
+						<h3 class="text-xl font-bold text-gray-900">Impresión Flexo</h3>
+						<p class="mt-3 text-gray-600 leading-relaxed text-sm">Capacidad de hasta <strong>10 tintas</strong> UVI. Ideal para tiradas medias/largas en papel enológico, térmico o plástico.</p>
+					</button>
 
-          <article class="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm card-hover transition-smooth fade-up" style="transition-delay: 200ms;">
-            <div class="w-12 h-12 bg-red-50 rounded-xl flex items-center justify-center text-brand-red mb-6">
-              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-            </div>
-            <h3 class="text-xl font-bold text-gray-900">Digital Xeikon</h3>
-            <p class="mt-3 text-gray-600 leading-relaxed text-sm">Tecnología "The Cheetah". Tintas seguras (FDA), dato variable, QR y máxima velocidad.</p>
-          </article>
+					<button 
+						onclick="showTechDetails('digital')" 
+						class="tech-card bg-white p-8 rounded-2xl border border-gray-100 shadow-sm card-hover transition-smooth fade-up text-left hover:shadow-lg hover:border-brand-red/50 cursor-pointer" 
+						style="transition-delay: 200ms;">
+						<div class="w-12 h-12 bg-red-50 rounded-xl flex items-center justify-center text-brand-red mb-6">
+							<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+						</div>
+						<h3 class="text-xl font-bold text-gray-900">Digital Xeikon</h3>
+						<p class="mt-3 text-gray-600 leading-relaxed text-sm">Tecnología "The Cheetah". Tintas seguras (FDA), dato variable, QR y máxima velocidad.</p>
+					</button>
 
-          <article class="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm card-hover transition-smooth fade-up" style="transition-delay: 300ms;">
-            <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center text-brand-blue mb-6">
-              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
-            </div>
-            <h3 class="text-xl font-bold text-gray-900">Acabados Especiales</h3>
-            <p class="mt-3 text-gray-600 leading-relaxed text-sm">
-				Relieve Serigráfico,Stamping (Oro/Plata),Braille (Accesibilidad),Golpe Seco,Barniz UVI.
-			</p>
-          </article>
-        </div>
-      </div>
-    </section>
+					<button 
+						onclick="showTechDetails('special')" 
+						class="tech-card bg-white p-8 rounded-2xl border border-gray-100 shadow-sm card-hover transition-smooth fade-up text-left hover:shadow-lg hover:border-blue-600/50 cursor-pointer" 
+						style="transition-delay: 300ms;">
+						<div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center text-brand-blue mb-6">
+							<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
+						</div>
+						<h3 class="text-xl font-bold text-gray-900">Acabados Especiales</h3>
+						<p class="mt-3 text-gray-600 leading-relaxed text-sm">Relieve Serigráfico,Stamping (Oro/Plata),Braille (Accesibilidad),Golpe Seco,Barniz UVI.</p>
+					</button>
+				</div>
+
+				<div id="tech-details-box" class="mt-12 p-8 bg-white border border-gray-200 rounded-2xl shadow-xl hidden">
+					<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+						
+						<div class="w-full h-96 relative bg-gray-100 rounded-lg overflow-hidden flex items-center justify-center">
+							
+							<img id="tech-image" src="" alt="Imagen de la tecnología seleccionada" class="object-cover w-full h-full transition-opacity duration-500 opacity-0">
+							
+							<button onclick="prevImage()" id="prev-btn" class="absolute left-0 top-1/2 transform -translate-y-1/2 p-2 mx-2 bg-gray-900/50 text-white rounded-full hover:bg-gray-900/80 transition-colors z-10 hidden">
+								<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+							</button>
+							
+							<button onclick="nextImage()" id="next-btn" class="absolute right-0 top-1/2 transform -translate-y-1/2 p-2 mx-2 bg-gray-900/50 text-white rounded-full hover:bg-gray-900/80 transition-colors z-10 hidden">
+								<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+							</button>
+							
+							<div id="gallery-indicator" class="absolute bottom-0 left-0 right-0 p-2 text-center text-sm text-white bg-gray-900/50 hidden"></div>
+						</div>
+						
+						<div>
+							<h3 id="tech-title" class="text-3xl font-extrabold text-gray-900 mb-3"></h3>
+							<div id="tech-description" class="text-gray-700 leading-relaxed space-y-4"></div>
+							<button onclick="hideTechDetails()" class="mt-6 text-sm font-semibold text-gray-500 hover:text-gray-900 transition-colors flex items-center">
+								<svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+								Cerrar detalles
+							</button>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+	</section>
 
 		<section id="portfolio" class="py-20 bg-white">
 			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -951,6 +992,152 @@
         // CAMBIA 'true' A 'false' PARA DESACTIVAR LA NIEVE FÁCILMENTE.
         enableSnowEffect(true); 
     });
+	
+	
+    // 1. DATOS DE LAS TECNOLOGÍAS - AHORA USAN UN ARRAY 'images'
+    const technologiesData = {
+        'design': {
+            title: 'Diseño y Fotomecánica Propia',
+            description: '<p>En <strong>Adhegrafic</strong> contamos con un <strong>departamento propio de diseño y fotomecánica</strong>, lo que nos permite controlar todo el proceso desde el primer boceto hasta el archivo final de impresión, garantizando <strong>precisión, coherencia y máxima calidad</strong> en cada proyecto.</p><p>Nuestro equipo optimiza los diseños para cada tecnología de impresión, asegurando una <strong>reproducción de color fiel</strong>, una correcta gestión de tramas y un resultado final impecable. Además, disponemos de <strong>certificación Miraclon</strong>, lo que avala nuestros procesos de fotomecánica y la preparación de clichés de alto rendimiento con los más altos estándares del sector.</p><p>Esta combinación de experiencia, tecnología y certificación nos permite ofrecer <strong>mayor rapidez, fiabilidad y flexibilidad</strong>, reduciendo tiempos de ajuste en máquina y asegurando un acabado profesional que aporta valor a tu marca.</p>',
+			images: [
+                'images/diseno1.jpg', // PRIMERA IMAGEN
+                'images/diseno2.jpg'  // SEGUNDA IMAGEN (Si existe)
+            ]
+        },
+        'flexo': {
+            title: 'Impresión Flexográfica UVI de Alto Rendimiento',
+            description: '<p>La <strong>impresión flexográfica UVI de alto rendimiento</strong> es la solución ideal para producciones de gran volumen que requieren <strong>máxima calidad, estabilidad y eficiencia</strong>. Gracias al curado ultravioleta, las tintas se secan de forma instantánea, permitiendo una mayor velocidad de impresión y un control absoluto del color.</p><p>Este sistema garantiza <strong>colores intensos, excelente cobertura y una definición precisa</strong>, incluso en diseños complejos o soportes exigentes. Además, ofrece una gran <strong>versatilidad de materiales</strong>, adaptándose a todo tipo de etiquetas y aplicaciones.</p><p>La tecnología UVI aporta también un proceso más <strong>limpio y sostenible</strong>, reduciendo mermas y optimizando los tiempos de producción. En <strong>Adhegrafic</strong>, esta tecnología nos permite ofrecer <strong>resultados consistentes, plazos ajustados y un acabado de alto impacto</strong> para marcas que buscan destacar en el punto de venta.</p>',
+			images: [
+                'images/flexo1.jpg' ,
+				'images/flexo2.jpg' ,
+				'images/flexo3.jpg' ,
+				'images/flexo4.jpg'
+            ]
+        },
+        'digital': {
+			title: 'Impresión Digital Xeikon (The Cheetah)',
+			description: '<p>La impresión digital <strong>Xeikon The Cheetah</strong> ofrece <strong>máxima calidad y velocidad</strong> sin necesidad de clichés, reduciendo costes y tiempos de producción. Es la solución ideal para <strong>tiradas cortas y medias</strong>, lanzamientos rápidos y ediciones limitadas.</p><p>Gracias a su avanzada tecnología, permite <strong>personalización masiva</strong> (dato variable, códigos QR, numeraciones y versiones múltiples) con una calidad constante desde la primera hasta la última etiqueta.</p><p>Además, su gran <strong>versatilidad de materiales</strong> y su proceso eficiente y sostenible convierten a Xeikon The Cheetah en la opción perfecta para marcas que buscan <strong>agilidad, fiabilidad y un acabado premium</strong>.</p>',
+			images: [
+				'images/xeicon.jpg', // Foto de la máquina
+				'images/tech/digital-2.jpg', // Foto de la impresión de dato variable
+				'images/tech/digital-3.jpg'  // Foto de un ejemplo de etiqueta digital
+			]
+		},
+
+        'special': {
+            title: 'Línea Completa de Acabados Premium',
+            description: '<p>La <strong>diferenciación de una marca</strong> se consigue con el <strong>tacto y la luz</strong>. En <strong>Adhegrafic</strong> ofrecemos una <strong>amplia gama de acabados premium en línea</strong>, integrados directamente en el proceso productivo para lograr la máxima eficiencia y un resultado de alto impacto.</p><p>Nuestras soluciones de acabado permiten realzar el diseño, aportar valor al producto y mejorar su presencia en el punto de venta, combinando <strong>precisión técnica y creatividad</strong>.</p><ul><li><strong>Relieve serigráfico:</strong> texturas y volúmenes perceptibles al tacto.</li><li><strong>Stamping (frío y caliente):</strong> detalles metálicos en oro o plata para un acabado premium.</li><li><strong>Braille:</strong> cumplimiento de las normativas de accesibilidad.</li><li><strong>Golpe seco (deboss/emboss):</strong> acabado sutil sin tinta, elegante y diferenciador.</li><li><strong>Barniz UVI mate/brillo:</strong> protección, contraste y efectos visuales de alto impacto.</li></ul>',
+			images: [
+                'images/acabados1.jpg',
+                'images/acabados2.jpg',
+				'images/acabados3.jpg',
+                'images/acabados4.jpg',
+				'images/acabados5.jpg',
+                'images/acabados6.jpg'
+            ]
+        }
+    };
+
+    let currentTechId = null;
+    let currentImageIndex = 0;
+
+    // Elementos DOM
+    const detailsBox = document.getElementById('tech-details-box');
+    const techTitle = document.getElementById('tech-title');
+    const techDescription = document.getElementById('tech-description');
+    const techImage = document.getElementById('tech-image');
+    const prevBtn = document.getElementById('prev-btn');
+    const nextBtn = document.getElementById('next-btn');
+    const galleryIndicator = document.getElementById('gallery-indicator');
+
+
+    // 3. FUNCIONES DE LÓGICA DE GALERÍA
+
+    function updateImageDisplay() {
+        const data = technologiesData[currentTechId];
+        if (!data || data.images.length === 0) return;
+
+        // 1. Aplicar efecto de transición
+        techImage.classList.remove('opacity-100');
+        techImage.classList.add('opacity-0');
+
+        setTimeout(() => {
+            // 2. Actualizar la fuente de la imagen
+            techImage.src = data.images[currentImageIndex];
+            techImage.alt = `${data.title} - Imagen ${currentImageIndex + 1}`;
+            
+            // 3. Quitar efecto de transición
+            techImage.classList.remove('opacity-0');
+            techImage.classList.add('opacity-100');
+
+            // 4. Actualizar estado de los botones y el indicador
+            updateGalleryControls(data.images.length);
+
+        }, 100); // Pequeño retraso para la animación
+    }
+
+    function updateGalleryControls(totalImages) {
+        if (totalImages <= 1) {
+            prevBtn.classList.add('hidden');
+            nextBtn.classList.add('hidden');
+            galleryIndicator.classList.add('hidden');
+        } else {
+            // Mostrar controles si hay más de una imagen
+            prevBtn.classList.remove('hidden');
+            nextBtn.classList.remove('hidden');
+            galleryIndicator.classList.remove('hidden');
+
+            // Habilitar/deshabilitar botones según el índice
+            prevBtn.disabled = currentImageIndex === 0;
+            nextBtn.disabled = currentImageIndex === totalImages - 1;
+
+            galleryIndicator.textContent = `${currentImageIndex + 1} de ${totalImages}`;
+        }
+    }
+
+    // Funciones de navegación (disparadas por los botones onclick)
+    window.nextImage = function() {
+        const data = technologiesData[currentTechId];
+        if (currentImageIndex < data.images.length - 1) {
+            currentImageIndex++;
+            updateImageDisplay();
+        }
+    };
+
+    window.prevImage = function() {
+        if (currentImageIndex > 0) {
+            currentImageIndex--;
+            updateImageDisplay();
+        }
+    };
+
+
+    // 4. FUNCIÓN PRINCIPAL PARA MOSTRAR DETALLES
+    window.showTechDetails = function(id) {
+        const data = technologiesData[id];
+        if (!data) return;
+
+        currentTechId = id;
+        currentImageIndex = 0; // Resetear a la primera imagen al abrir
+
+        // Actualizar contenido de texto
+        techTitle.innerHTML = data.title;
+        techDescription.innerHTML = data.description;
+        
+        // Mostrar la caja de detalles si estaba oculta
+        if (detailsBox.classList.contains('hidden')) {
+            detailsBox.classList.remove('hidden');
+        }
+        
+        // Mostrar la primera imagen de la galería
+        updateImageDisplay();
+    };
+
+    window.hideTechDetails = function() {
+        detailsBox.classList.add('hidden');
+        currentTechId = null;
+    };
+
   </script>
   <div id="success-modal" class="fixed inset-0 bg-gray-900 bg-opacity-70 z-[9999] hidden flex items-center justify-center transition-opacity duration-300">
     <div class="bg-white p-8 rounded-xl shadow-2xl text-center max-w-sm transform scale-95 transition-transform duration-300 ease-out">
