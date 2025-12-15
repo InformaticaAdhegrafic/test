@@ -4,9 +4,9 @@ header('Content-Type: application/json'); // Indicamos que la respuesta es JSON
 // **********************************************
 // * 1. CONFIGURACIÓN (REEMPLAZA TU CORREO AQUÍ)
 // **********************************************
-$destinatario = "adhegrafic@adhegrafic.es"; 
+$destinatario = "adhegrafic@adhegrafic.org"; 
 $asunto = "Nueva Solicitud de Presupuesto - Web Adhegrafic";
-$remitente = "no-responder@adhegrafic.es";
+$remitente = "no-responder@adhegrafic.org";
 $dominio_web = "https://www.adhegrafic.es"; // Usado para asegurar CORS si fuera necesario
 
 // **********************************************
@@ -80,4 +80,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     http_response_code(405); // Method Not Allowed
     echo json_encode(["success" => false, "message" => "Método no permitido."]);
 }
+
 ?>
