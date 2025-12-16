@@ -77,6 +77,26 @@
         }
     }
 	
+	/* Estado inicial del contenedor de detalles */
+#tech-details-box {
+    display: none; /* Se mantiene para que no ocupe espacio inicialmente */
+    opacity: 0;
+    transform: translateY(20px) scale(0.98);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Clase que aplicaremos con JS para mostrarlo con fluidez */
+#tech-details-box.is-visible {
+    display: block; /* Se cambia vía JS antes de la opacidad */
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+/* Efecto suave para la imagen al cambiar */
+#tech-image {
+    transition: opacity 0.4s ease-in-out;
+}
+	
   </style>
 </head>
 
@@ -252,7 +272,7 @@
 					
 					<button 
 						onclick="showTechDetails('design')" 
-						class="tech-card bg-white p-8 rounded-2xl border border-gray-100 shadow-sm card-hover transition-smooth fade-up text-left hover:shadow-lg hover:border-brand-red/50 cursor-pointer">
+						class="tech-card bg-white p-8 rounded-2xl border border-gray-100 shadow-sm card-hover transition-smooth fade-up text-left hover:shadow-lg hover:border-brand-red/500 cursor-pointer">
 						<div class="w-12 h-12 bg-red-50 rounded-xl flex items-center justify-center text-brand-red mb-6">
 							<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path></svg>
 						</div>
@@ -273,7 +293,7 @@
 
 					<button 
 						onclick="showTechDetails('digital')" 
-						class="tech-card bg-white p-8 rounded-2xl border border-gray-100 shadow-sm card-hover transition-smooth fade-up text-left hover:shadow-lg hover:border-brand-red/50 cursor-pointer" 
+						class="tech-card bg-white p-8 rounded-2xl border border-gray-100 shadow-sm card-hover transition-smooth fade-up text-left hover:shadow-lg hover:border-brand-red/500 cursor-pointer" 
 						style="transition-delay: 200ms;">
 						<div class="w-12 h-12 bg-red-50 rounded-xl flex items-center justify-center text-brand-red mb-6">
 							<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
@@ -968,7 +988,7 @@
         enableSnowEffect(true); 
     });
 	
-	
+	//seccion tecnologia y acabados
     // 1. DATOS DE LAS TECNOLOGÍAS - AHORA USAN UN ARRAY 'images'
     const technologiesData = {
         'design': {
@@ -1083,31 +1103,49 @@
     };
 
 
-    // 4. FUNCIÓN PRINCIPAL PARA MOSTRAR DETALLES
-    window.showTechDetails = function(id) {
-        const data = technologiesData[id];
-        if (!data) return;
+    // 4. FUNCIÓN PRINCIPAL PARA MOSTRAR DETALLES CON TRANSICIÓN FLUIDA
+window.showTechDetails = function(id) {
+    const data = technologiesData[id];
+    if (!data) return;
 
-        currentTechId = id;
-        currentImageIndex = 0; // Resetear a la primera imagen al abrir
+    // Si ya está abierto el mismo ID, no re-animamos todo, solo actualizamos
+    const isAlreadyOpen = !detailsBox.classList.contains('hidden') && currentTechId === id;
 
-        // Actualizar contenido de texto
-        techTitle.innerHTML = data.title;
-        techDescription.innerHTML = data.description;
+    currentTechId = id;
+    currentImageIndex = 0; 
+
+    // Actualizar contenido de texto e imagen inmediatamente
+    techTitle.innerHTML = data.title;
+    techDescription.innerHTML = data.description;
+    updateImageDisplay();
+    
+    if (!isAlreadyOpen) {
+        // 1. Quitamos 'hidden' pero mantenemos opacidad 0 (vía CSS)
+        detailsBox.classList.remove('hidden');
         
-        // Mostrar la caja de detalles si estaba oculta
-        if (detailsBox.classList.contains('hidden')) {
-            detailsBox.classList.remove('hidden');
-        }
-        
-        // Mostrar la primera imagen de la galería
-        updateImageDisplay();
-    };
+        // 2. Pequeño delay para que el navegador registre el cambio de display
+        setTimeout(() => {
+            detailsBox.classList.add('is-visible');
+            
+            // 3. Scroll suave al cuadro de detalles
+            detailsBox.scrollIntoView({ 
+                behavior: 'smooth', 
+                block: 'nearest' 
+            });
+        }, 10);
+    }
+};
 
-    window.hideTechDetails = function() {
+window.hideTechDetails = function() {
+    // 1. Iniciamos la animación de salida
+    detailsBox.classList.remove('is-visible');
+    
+    // 2. Esperamos a que termine la transición (500ms) para poner 'hidden'
+    setTimeout(() => {
         detailsBox.classList.add('hidden');
         currentTechId = null;
-    };
+    }, 500);
+};
 
 
 // 1. Configuración de ocultar y ver mas del portfolio
