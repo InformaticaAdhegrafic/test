@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://www.adhegrafic.es/</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.adhegrafic.es/#services</loc>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://www.adhegrafic.es/#portfolio</loc>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://www.adhegrafic.es/#calidad</loc>
+    <priority>0.70</priority>
+  </url>
+
+  <url>
+    <loc>https://www.adhegrafic.es/#contact</loc>
+    <priority>0.70</priority>
+  </url>
+
+  <url>
+    <loc>https://www.adhegrafic.es/aviso-legal.html</loc>
+    <priority>0.30</priority>
+  </url>
+
+  <url>
+    <loc>https://www.adhegrafic.es/privacidad.html</loc>
+    <priority>0.30</priority>
+  </url>
+
+  <url>
+    <loc>https://www.adhegrafic.es/cookies.html</loc>
+    <priority>0.30</priority>
+  </url>
+
+</urlset>
